@@ -64,3 +64,39 @@
         font-size: 1.5rem;
     }
 }
+
+@media screen and (max-width:576px) {
+    #presentes {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .presente {
+        width: 40%;
+        white-space: wrap;
+    }
+    #presentes img {
+        width: 100%;
+    }
+    h3{
+        font-size: 1.0rem;
+    }
+}
+
+@media screen and (max-width:380px) {
+    #presentes {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .presente {
+        width: 60%;
+        white-space: wrap;
+    }
+    #presentes img {
+        width: 100%;
+    }
+    h3{
+        font-size: 1.0rem;
+    }
+}
