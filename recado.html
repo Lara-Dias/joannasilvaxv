@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="src/styles/style.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+        <link rel="icon" href="/src/img/favicon.png" type="image/png" sizes="32x32">
+    
+        <title>Recados</title>
+    </head>
+<body>
+    <header>
+        <nav id="navbar">
+
+            <a id="inicial" href="index.html">
+                <img src="/src/img/id_home.png" alt="Logo" id="nav_logo" type="image/png">
+            </a>
+            <ul id="nav_list">
+                <li class="nav-item">
+                    <a href="lista.html">Lista de Presentes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="presenca.html">Confirme sua presença</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="recado.html">Recados</a>
+                </li>
+            </ul>
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="lista.html">Lista de Presentes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="presenca.html">Confirme sua presença</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="recado.html">Recados</a>
+                </li>
+            </ul>
+        </div>
+   </header>
+
+   <main id="content">
+        <section id="recados">
+            <h1>Deixe sua mensagem de carinho</h1>
+            <p>Cada momento compartilhado aqui é um pedacinho de carinho que levaremos para sempre, que suas palavras tragam um sorriso a cada lembrança dos momentos que passamos.</p>
+            
+            <div id="formulario">
+                <h3>Nome ou Apelido</h3>
+                <input type="text" id="nome" placeholder="Digite aqui" required>
+                <br>
+                <h3>Mensagem</h3>
+                <textarea id="mensagemInput" placeholder="Digite aqui" required></textarea>
+            </div>
+            <button id="enviarRecado" class="btn-default">Enviar Recado</button>
+
+            <div id="recadoContainer"></div>
+
+            <button id="verMaisRecados" class="btn-default">Ver mais recados</button>
+        </section>
+   </main>
+
+   <footer role="contentinfo">
+    <img id="icon" src="src/img/favicon.png" alt="Icone JS">
+    <span id="copyright">
+        &copy 2024 Lara Dias
+    </span>
+</footer>
+
+    <script src="src/js/script.js"></script>
+
+</body>
+</html>

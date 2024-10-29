@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/styles/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="icon" href="/src/img/favicon.png" type="image/png" sizes="32x32">
+
+    <title>Lista de Presentes</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <a id="inicial" href="index.html">
+                <img src="/src/img/id_home.png" alt="Logo" id="nav_logo" type="image/png">
+            </a>
+                <ul id="nav_list">
+                <li class="nav-item active">
+                    <a href="lista.html">Lista de Presentes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="presenca.html">Confirme sua presença</a>
+                </li>
+                <li class="nav-item">
+                    <a href="recado.html">Recados</a>
+                </li>
+            </ul>
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item active">
+                    <a href="lista.html">Lista de Presentes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="presenca.html">Confirme sua presença</a>
+                </li>
+                <li class="nav-item">
+                    <a href="recado.html">Recados</a>
+                </li>
+            </ul>
+        </div>
+   </header>
+
+    <main id="lista">
+       <h1>Lista de Presentes</h1> 
+        
+       <h2>Roupas</h2>
+       <div id="presentes">
+        <div class="presente">
+           <img src="src/img/presentes/camisa.png" alt="Camisa">
+            <h3>Camisas</h3>
+            <p>Tamanho 34, P ou PP</p>
+        </div>
+        <div class="presente">
+            <img src="src/img/presentes/short.png" alt="Short">
+            <h3>Partes de baixo</h3>
+            <p>Tamanho 34, P ou PP</p>
+        </div>
+        <div class="presente">
+            <img src="src/img/presentes/vestido.png" alt="Vestido regata">
+            <h3>Vestidos</h3>
+            <p>Tamanho 34, P ou PP</p>
+        </div>
+        <div class="presente">
+            <img src="src/img/presentes/biquini.png" alt="Biquini">
+            <h3>Biquínis</h3>
+            <p>Tamanho 34, P ou PP</p>
+        </div>
+        <div class="presente">
+            <img src="src/img/presentes/chinelo.png" alt="Chinelo">
+            <h3>Calçados</h3>
+            <p>Tamanho 35/36</p>
+        </div>
+       </div>
+
+       <h2>Acessórios</h2>
+       <div id="presentes">
+        <div class="presente">
+           <img src="src/img/presentes/cordão.png" alt="Colar">
+            <h3>Colares</h3>
+            <p>Prata 525</p>
+        </div>
+        <div class="presente">
+            <img src="src/img/presentes/pulseira.png" alt="Braço com pulseiras">
+            <h3>Pulseiras</h3>
+            <p>Prata 525</p>
+        </div>
+        <div class="presente">
+            <img src="src/img/presentes/anel.png" alt="Anel">
+            <h3>Anéis</h3>
+            <p>Tamanho 17, prata 525</p>
+        </div>
+       </div>
+
+       <h2>Produtos</h2>
+       <div id="presentes">
+        <div class="presente">
+            <img src="src/img/presentes/beleza.png" alt="Maquiagem">
+             <h3>Itens de beleza</h3>
+         </div>
+         <div class="presente">
+            <img src="src/img/presentes/skincare.png" alt="Cremes facias">
+             <h3>Itens de skincare</h3>
+         </div>
+        <div class="presente">
+           <img src="src/img/presentes/perfume.png" alt="Perfume">
+            <h3>Perfumes</h3>
+        </div>
+        <div class="presente">
+            <img src="src/img/presentes/creme.png" alt="Bisnaga de creme">
+            <h3>Cremes</h3>
+        </div>
+       </div>
+       <div class="pix">
+            <h3>Se preferir, me presenteie através do Pix.</h3>
+            <p>Clique para copiar</p>
+            <br>
+            <button id="pix" class="btn-default">21 99580-7182</button>
+       </div> 
+       
+    </main>
+
+    <footer role="contentinfo">
+        <img id="icon" src="src/img/favicon.png" alt="Icone JS">
+        <span id="copyright">
+            &copy 2024 Lara Dias
+        </span>
+    </footer>
+    <script src="src/js/script.js"></script>
+</body>
+</html>
