@@ -30,7 +30,7 @@
 }
 
 #acoes{
-    background-image: url(/src/img/home/banner_fundo.png);
+    background-image: url(src/img/home/banner_fundo.png);
     background-size: cover;
     background-repeat: no-repeat;
     flex-shrink: 0;
