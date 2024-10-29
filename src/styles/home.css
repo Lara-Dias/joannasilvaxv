@@ -1,0 +1,215 @@
+#home{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 0%;
+}
+
+#cta{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+}
+
+#cta .descricao {
+    font-size: 1.5rem;
+}
+
+#banner{
+    width: 40%;
+    flex-direction: column;
+    display: flex;
+    margin-top: -30px;
+}
+
+#banner img{
+    width: 100%;
+    margin-top: -100px;
+}
+
+#acoes{
+    background-image: url(/src/img/home/banner_fundo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    color: var(--rosa);
+    height: 100%;
+    width: 100%;
+    margin-top: -100px;
+}
+
+#cta_buttons{
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    padding: 50px;
+}
+
+.botao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#acoes .descricao{
+    align-items: center;
+    color: var(--preto);
+    font-size: 1.3rem;
+    margin-top: 180px;
+}
+
+.btn-pag img{
+    width: 200px;
+    height: 200px;
+}
+
+#cta_interacao{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+#contagem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--preto);
+    gap: 10px;
+    padding: 30px;
+    background-color:rgba(255, 255, 255, 0.753);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 2px rgb(0, 0, 0, 0.1);
+}
+
+#contagemTexto {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 60px;
+}
+#contagem p{
+    margin: 0px;
+}
+
+#contagemTexto h3 {
+    color: var(--pink);
+    font-size:1.2rem;
+    width: 70px;
+    text-align: center;
+}
+
+#tempo{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+#tempo div {
+    display: flex;
+    width: 80px;
+    height: 100px;
+    background-color:  var(--pink);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    color: var(--rosa);
+    font-size: 50px;
+}
+
+#tempo p{
+    font-size: 50px;
+    justify-content: center;
+}
+
+#fotos {
+    position: relative;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    overflow: hidden;
+    width: 40%;
+    height: 230px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 2px rgb(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.foto {
+    position: absolute;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    opacity: 0;
+
+}
+
+.foto.active {
+    opacity: 1; 
+}
+
+
+@media screen and (max-width:1170px) {
+    #home{
+        min-height: 100%;
+        padding-top: 0%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #banner {
+        width: 100%;
+        align-items: center;
+    }
+
+    #banner img{
+        width: 400px;
+        height: 400px;
+        margin-top: 5px;
+    }
+
+    #cta{
+        width: 100%;
+        margin: 0%;
+    }
+
+    #acoes{
+        margin-top: 0;
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    #cta_buttons{
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+
+    #acoes .descricao{
+        margin-left: 0px;
+        justify-content: center;
+    }
+    #cta_interacao{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: 1320px;
+    }
+}
