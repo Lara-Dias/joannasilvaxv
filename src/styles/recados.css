@@ -27,52 +27,11 @@
     margin-bottom:10px;
 }
 
-#recadoContainer{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
 .info h3{
     color: var(--pink);
     margin: 0;
 }
 
-.recado.pequeno {
-    background-color: rgba(255, 255, 255, 0.753);
-    border-radius: 20px;
-    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.recado.grande {
-    grid-column: 1 / -1; 
-    background-color: rgba(255, 255, 255, 0.753);
-    border-radius: 20px;
-    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-#avatar{
-    width: 80px;
-    height: 80px;
-    font-size: 50px;
-    color: var(--pink);
-    background-color: var(--rosa);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    flex-shrink: 0; 
-}
 
 #recados{
     display: flex;
@@ -103,26 +62,4 @@
     overflow-wrap: break-word;
     word-break: normal;
     max-width: 100%;
-}
-
-@media screen and (max-width:1170px) {
-    #recadoContainer, h1, p {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .recado {
-        width: 100%;
-        max-width: none;
-    }
-
-    #recadoContainer > .recado.grande,
-    #recadoContainer > .recado.pequeno {
-        width: 100%;
-        flex: 1 1 100%;
-        text-align: start;
-    }
 }

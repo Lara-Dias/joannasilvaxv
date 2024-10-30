@@ -25,89 +25,23 @@ $(document).ready(function() {
 
 //recado
 $(document).ready(function() {
-    const recadosPorPagina = 10; 
-    let recadosVisiveis = 0; 
-
-    //localStorage.removeItem('recados'); // Remove os recados do localStorage
-    //carregarRecados();
-
-    function carregarRecados() {
-        const recados = JSON.parse(localStorage.getItem('recados')) || [];
-        recadosVisiveis = 0; 
-        $("#recadoContainer").empty();
-
-        
-        for (let i = 0; i < recadosPorPagina && i < recados.length; i++) {
-            adicionarRecado(recados[i].nome, recados[i].mensagem);
-            recadosVisiveis++;
-        }
-
-        
-        if (recados.length > recadosPorPagina) {
-            $("#verMaisRecados").show(); 
-        } else {
-            $("#verMaisRecados").hide(); 
-        }
-    }
-
-   
-    function adicionarRecado(nome, mensagem) {
-        const maxTam = 100;
-        const recadoClass = mensagem.length > maxTam ? 'grande' : 'pequeno';
-        
-        const novoRecado = `
-            <div class="recado ${recadoClass}">
-                <div id="mensagem">
-                    <i id="avatar" class="fa-regular fa-user"></i>
-                    <div class="info">
-                        <h3>${nome}</h3>
-                        <p>${mensagem}</p>
-                    </div>
-                </div>
-            </div>
-        `;
-        $("#recadoContainer").append(novoRecado);
-    }
-
-    
-    carregarRecados();
-
     $("#enviarRecado").click(function() {
         const nome = $("#nome").val().trim();
         const mensagem = $("#mensagemInput").val().trim();
 
         if (nome && mensagem) {
+            const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLScqTdiN2CPtVwEW0nxtVkoAc2fjxhAjKLJuL123Q9o-xOr-9g/formResponse";
             
-            adicionarRecado(nome, mensagem);
+            $.post(googleFormURL, {
+                "entry.1623809664": nome,       
+                "entry.1446850529": mensagem
+            });
 
-            
-            const recados = JSON.parse(localStorage.getItem('recados')) || [];
-            recados.push({ nome: nome, mensagem: mensagem });
-            localStorage.setItem('recados', JSON.stringify(recados));
-
-           
             $("#nome").val('');
             $("#mensagemInput").val('');
-
-            
-            carregarRecados();
+            alert("Recado enviado com sucesso!");
         } else {
             alert("Por favor, preencha todos os campos.");
-        }
-    });
-
-    
-    $("#verMaisRecados").click(function() {
-        const recados = JSON.parse(localStorage.getItem('recados')) || [];
-        const proximoIndice = recadosVisiveis; 
-        for (let i = proximoIndice; i < proximoIndice + recadosPorPagina && i < recados.length; i++) {
-            adicionarRecado(recados[i].nome, recados[i].mensagem);
-            recadosVisiveis++;
-        }
-
-        
-        if (recadosVisiveis >= recados.length) {
-            $("#verMaisRecados").hide(); 
         }
     });
 });
