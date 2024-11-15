@@ -114,7 +114,7 @@ $(document).ready(function() {
 
         const mensagemCodificada = encodeURIComponent(mensagem);
         
-        const numeroWhatsApp = '5521969886586';
+        const numeroWhatsApp = '5521990040472';
         const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
         
         window.location.href = urlWhatsApp;
